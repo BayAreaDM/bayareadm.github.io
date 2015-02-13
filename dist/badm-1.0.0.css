@@ -37,10 +37,9 @@ body {
   font-family: "Avenir", "Helvetica", sans-serif;
 }
 section {
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100%;
   display: block;
-  padding: 25px 0;
 }
 .section-orange {
   background-color: #f47b29;
@@ -57,12 +56,13 @@ section {
   padding-bottom: 56.25%;
   padding-top: 60px;
   overflow: hidden;
+  margin-top: 7.75%;
 }
 .responsive-video iframe,
 .responsive-video object,
 .responsive-video embed {
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -111,10 +111,9 @@ body {
   font-family: "Avenir", "Helvetica", sans-serif;
 }
 section {
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100%;
   display: block;
-  padding: 25px 0;
 }
 .section-orange {
   background-color: #f47b29;
@@ -131,12 +130,13 @@ section {
   padding-bottom: 56.25%;
   padding-top: 60px;
   overflow: hidden;
+  margin-top: 7.75%;
 }
 .responsive-video iframe,
 .responsive-video object,
 .responsive-video embed {
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 0;
   width: 100%;
   height: 100%;
