@@ -1,0 +1,144 @@
+/*!
+ * BADM - v1.0.0 -  - 2015-02-12
+ * http://bayareadm.org
+ * Copyright (c) 2015 Matt Gerstman;
+ */
+@font-face {
+  font-family: 'Avenir';
+  src: url('avenirltstd-light-webfont.eot');
+  src: url('avenirltstd-light-webfont.eot?#iefix') format('embedded-opentype'), url('avenirltstd-light-webfont.woff2') format('woff2'), url('avenirltstd-light-webfont.woff') format('woff'), url('avenirltstd-light-webfont.ttf') format('truetype'), url('avenirltstd-light-webfont.svg#avenir_lt_std35_light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.navbar-default {
+  color: white;
+  background-color: #8379b9;
+  border-bottom: 2px solid purple;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar-default a,
+.navbar-default a:visited {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:visited {
+  color: white;
+}
+.logo {
+  width: 100%;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+body {
+  padding-top: 50px;
+  font-family: "Avenir", "Helvetica", sans-serif;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  padding: 25px 0;
+}
+.section-orange {
+  background-color: #f47b29;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
+.section-light-blue {
+  background-color: #009ad9;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 60px;
+  overflow: hidden;
+}
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=badm-1.0.0.css.map */
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('avenirltstd-light-webfont.eot');
+  src: url('avenirltstd-light-webfont.eot?#iefix') format('embedded-opentype'), url('avenirltstd-light-webfont.woff2') format('woff2'), url('avenirltstd-light-webfont.woff') format('woff'), url('avenirltstd-light-webfont.ttf') format('truetype'), url('avenirltstd-light-webfont.svg#avenir_lt_std35_light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*# sourceMappingURL=badm-1.0.0.css.map */
+@font-face {
+  font-family: 'Avenir';
+  src: url('avenirltstd-light-webfont.eot');
+  src: url('avenirltstd-light-webfont.eot?#iefix') format('embedded-opentype'), url('avenirltstd-light-webfont.woff2') format('woff2'), url('avenirltstd-light-webfont.woff') format('woff'), url('avenirltstd-light-webfont.ttf') format('truetype'), url('avenirltstd-light-webfont.svg#avenir_lt_std35_light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.navbar-default {
+  color: white;
+  background-color: #8379b9;
+  border-bottom: 2px solid purple;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar-default a,
+.navbar-default a:visited {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:visited {
+  color: white;
+}
+.logo {
+  width: 100%;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+body {
+  padding-top: 50px;
+  font-family: "Avenir", "Helvetica", sans-serif;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  padding: 25px 0;
+}
+.section-orange {
+  background-color: #f47b29;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
+.section-light-blue {
+  background-color: #009ad9;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 60px;
+  overflow: hidden;
+}
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=badm-1.0.0.css.map */

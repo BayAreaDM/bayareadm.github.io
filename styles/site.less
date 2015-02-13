@@ -1,0 +1,78 @@
+//
+// Navbar
+// --------------------------------------------------
+
+@import "colors.less";
+@import "fonts.less";
+
+// Default navbar
+.navbar-default {
+  color: white;
+  background-color:@purple;
+  border-bottom: 2px solid purple;
+  position:fixed;
+  top:0;
+  width:100%;
+}
+.navbar-default a,
+.navbar-default a:visited {
+  color:white;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:visited {
+  color:white;
+}
+
+.logo {
+  width:100%;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+body {
+  padding-top:50px;
+  font-family: "Avenir", "Helvetica", sans-serif;
+}
+
+section {
+  height: 100vh;
+  width:100%;
+  display:block;
+  padding:25px 0;
+}
+
+
+.section-orange {
+  background-color: @orange;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
+
+
+.section-light-blue {
+  background-color: @light-blue;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+
+.responsive-video {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 60px; overflow: hidden;
+}
+
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
