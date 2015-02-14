@@ -66,7 +66,7 @@ module.exports = function(grunt) {
           sourceMapFilename: 'dist/badm-<%= pkg.version %>.css.map'
         },
         files: {
-          'dist/badm-<%= pkg.version %>.css': 'styles/*.less'
+          'dist/badm-<%= pkg.version %>.css': 'styles/badm.less'
         }
       },
       prod: {

@@ -4,6 +4,17 @@
 
 @import "colors.less";
 @import "fonts.less";
+@import "mixins.less";
+@import "z-index.less";
+
+body {
+  padding-top:50px;
+  font-family: "Avenir", "Helvetica", sans-serif;
+}
+
+nav {
+  z-index: @zIndex-10;
+}
 
 // Default navbar
 .navbar-default {
@@ -24,34 +35,33 @@
   color:white;
 }
 
-.logo {
-  width:100%;
-}
-
-
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
 
-body {
-  padding-top:50px;
-  font-family: "Avenir", "Helvetica", sans-serif;
-}
-
-section {
-  height: calc(100vh - 50px);
+.full-section {
+  height:calc(100vh - 50px);
   width:100%;
-  display:block;
-
 }
 
-
-.section-orange {
-  background-color: @orange;
-  border-top: 1px solid orange;
-  border-bottom: 1px solid orange;
+.logo-img {
+  width:100%;
+  position: relative;
+  top: 50%;
+  .m-translateY(-50%);
 }
 
+.section-blue {
+  background-color: @blue;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.section-green {
+  background-color: @green;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+}
 
 .section-light-blue {
   background-color: @light-blue;
@@ -59,21 +69,48 @@ section {
   border-bottom: 1px solid blue;
 }
 
+.section-orange {
+  background-color: @orange;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
 
-.responsive-video {
-position: relative;
-padding-bottom: 56.25%;
-padding-top: 60px; overflow: hidden;
-margin-top:7.75%;
+.section-purple {
+  background-color: @purple;
+  border-top: 1px solid purple;
+  border-bottom: 1px solid purple;
+}
+
+.section-red {
+  background-color: @red;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+.elevator-pitch {
+  font-weight:100;
+  font-size:3vh;
+  padding:40px 0;
+  text-align: justify;
 }
 
 
-.responsive-video iframe,
-.responsive-video object,
-.responsive-video embed {
-position: absolute;
-top: 0%;
-left: 0;
-width: 100%;
-height: 100%;
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 90%;
+  margin-left: 5%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top:50px;
+  height: calc(100% - 100px);
 }
