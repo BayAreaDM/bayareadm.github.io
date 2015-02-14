@@ -13,21 +13,14 @@
 body {
   font-family: "Avenir", "Helvetica", sans-serif;
 }
-nav {
+.nav {
   z-index: 1000;
 }
 .navbar-default {
   color: white;
   background-color: #8379b9;
   border-bottom: 2px solid purple;
-  /*
-  position:fixed;
-  top:0;
-*/
   width: 100%;
-}
-.sticky {
-  top: 0;
 }
 .navbar-default a,
 .navbar-default a:visited,
@@ -35,33 +28,35 @@ nav {
 .navbar-default .navbar-nav > li > a:visited {
   color: white!important;
 }
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: #009ad9;
 }
 .active,
 .navbar-default .navbar-nav > .active > a {
   background-color: #8379b9;
   font-size: 1.6em;
 }
-.nav {
-  margin: 0;
-  display: table;
-  width: 100%;
-}
-.nav li {
-  display: table-cell;
-  float: none;
-}
-.part-section {
-  height: calc(100vh - 100px);
-  width: 100%;
+.sticky {
+  top: 0;
 }
 .full-section {
   height: 100vh;
   width: 100%;
 }
-.logo-img {
+.part-section {
+  height: calc(100vh - 100px);
   width: 100%;
+}
+.logo-img {
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -126,6 +121,61 @@ nav {
   .navbar-default {
     position: fixed;
     top: 0;
+  }
+  .part-section {
+    height: 100vh;
+  }
+}
+@media (min-width: 769px) {
+  .logo-vertical {
+    display: none;
+  }
+}
+@media (min-width: 996px) {
+  .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+  }
+  .nav li {
+    display: table-cell;
+    float: none;
+  }
+}
+@media handheld and (orientation: portrait) {
+  .logo-vertical {
+    display: inline-block !important;
+  }
+  .logo-landscape {
+    width: 80%;
+    margin: 2% 0 0 0;
+    display: none!important;
+  }
+}
+@media handheld and (orientation: landscape) {
+  .logo-vertical {
+    display: none!important;
+  }
+  .logo-landscape {
+    display: inline-block !important;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: portrait) {
+  .logo-vertical {
+    display: inline-block !important;
+  }
+  .logo-landscape {
+    display: none!important;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: landscape) {
+  .logo-vertical {
+    display: none!important;
+  }
+  .logo-landscape {
+    width: 80%;
+    margin: 2% 0 0 0;
+    display: inline-block !important;
   }
 }
 /*# sourceMappingURL=badm-1.0.0.css.map */

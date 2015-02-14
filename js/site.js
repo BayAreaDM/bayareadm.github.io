@@ -12,7 +12,7 @@ $(document).ready(function(){
     jqueryAnim: "slideUp",          // jQuery animation type: fadeIn, show or slideDown
     selector: "a",                  // Selector to which activeClass will be added, either "a" or "li"
     mobile: false,                  // If false nav will not stick under 480px width of window
-    mobileWidth: 480,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
+    mobileWidth: 768,               // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
     zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
     stickyModeClass: "sticky",      // Class that will be applied to 'this' in sticky mode
     unstickyModeClass: "unsticky"   // Class that will be applied to 'this' in non-sticky mode
@@ -21,4 +21,4 @@ $(document).ready(function(){
   $(".navbar-nav").on("click", "a", null, function () {
     $('.navbar-collapse.in').collapse('hide');
   });
-})
+});

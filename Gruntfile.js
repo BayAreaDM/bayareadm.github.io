@@ -11,51 +11,44 @@ module.exports = function(grunt) {
       ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;\n' +
       ' */',
     // Task configuration.
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: [
-          'js/*.js'
-          ],
-        dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js'
-      }
-    },
     uglify: {
       options: {
         banner: '<%= banner %>',
         sourceMap: true
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
+        src: [
+          'js/*.js'
+        ],
         dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.js'
       }
     },
     jshint: {
       files: [
+        '<%= uglify.dist.src %>',
+        'Gruntfile.js'
         ],
       gruntfile: {
         src: 'Gruntfile.js'
       },
     },
     lintspaces: {
-	    javascript: {
-	        src: [
-            'js/*.js'
-	        ],
-	        options: {
-	            newline: true,
-	            newlineMaximum: 2,
-	            trailingspaces: true,
-	            indentation: 'spaces',
-	            spaces: 2,
-	            ignores: ['js-comments']
-	        }
-	    }
-	},
-  less: {
+      javascript: {
+        src: [
+          'js/*.js',
+          'Gruntfile.js'
+        ],
+        options: {
+            newline: true,
+            newlineMaximum: 2,
+            trailingspaces: true,
+            indentation: 'spaces',
+            spaces: 2,
+            ignores: ['js-comments']
+        }
+      }
+    },
+    less: {
       dev: {
         options: {
           banner: '<%= banner %>',
@@ -80,7 +73,25 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          'dist/badm-<%= pkg.version %>.min.css': 'assets/styles/badm.less'
+          'dist/badm-<%= pkg.version %>.min.css' : 'assets/styles/badm.less'
+        }
+      }
+    },
+    injector: {
+      dev: {
+        files: {
+          'index.html': [
+            '<%= uglify.dist.src %>',
+            'dist/badm-<%= pkg.version %>.css'
+          ]
+        }
+      },
+      prod: {
+        files: {
+          'index.html': [
+            '<%= uglify.dist.src %>',
+            'dist/badm-<%= pkg.version %>.min.css'
+          ]
         }
       }
     },
@@ -94,19 +105,19 @@ module.exports = function(grunt) {
         tasks: ['lintspaces', 'jshint']
       }
     }
-  });
+});
 
   // These plugins provide necessary tasks.
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-injector');
 
   // Default task.
-  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev']);
-  grunt.registerTask('prod', ['concat', 'uglify', 'less:prod']);
+  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:dev']);
+  grunt.registerTask('prod', ['concat', 'uglify', 'less:prod', 'injector']);
 
 };
