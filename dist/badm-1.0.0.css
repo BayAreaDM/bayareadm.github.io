@@ -26,6 +26,9 @@ nav {
 */
   width: 100%;
 }
+.sticky {
+  top: 0;
+}
 .nav,
 .navbar-header,
 .navbar-brand,
@@ -39,13 +42,14 @@ nav {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
+.active,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > .active > a {
   background-color: #8379b9;
   font-size: 1.6em;
 }
 .part-section {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   width: 100%;
 }
 .full-section {
