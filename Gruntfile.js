@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 	            newlineMaximum: 2,
 	            trailingspaces: true,
 	            indentation: 'spaces',
-	            spaces: 4,
+	            spaces: 2,
 	            ignores: ['js-comments']
 	        }
 	    }

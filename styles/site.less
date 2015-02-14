@@ -8,7 +8,6 @@
 @import "z-index.less";
 
 body {
-  padding-top:50px;
   font-family: "Avenir", "Helvetica", sans-serif;
 }
 
@@ -21,8 +20,10 @@ nav {
   color: white;
   background-color:@purple;
   border-bottom: 2px solid purple;
+/*
   position:fixed;
   top:0;
+*/
   width:100%;
 }
 
@@ -47,8 +48,13 @@ nav {
   font-size: 1.6em;
 }
 
-.full-section {
+.part-section {
   height:calc(100vh - 50px);
+  width:100%;
+}
+
+.full-section {
+  height:100vh;
   width:100%;
 }
 
@@ -121,4 +127,11 @@ nav {
   width: 100%;
   margin-top:50px;
   height: calc(100% - 100px);
+}
+
+@media (max-width: 768px) {
+  .navbar-default {
+    position: fixed;
+    top:0;
+  }
 }
