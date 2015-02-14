@@ -25,16 +25,23 @@ nav {
   top: 0;
   width: 100%;
 }
+.nav,
+.navbar-header,
+.navbar-brand,
+.navbar-default,
 .navbar-default a,
-.navbar-default a:visited {
-  color: white;
-}
+.navbar-default a:visited,
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:visited {
-  color: white;
+  color: white!important;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a {
+  background-color: #8379b9;
+  font-size: 1.6em;
 }
 .full-section {
   height: calc(100vh - 50px);
