@@ -32,10 +32,7 @@ nav {
   top:0;
 }
 
-.nav,
-.navbar-header,
-.navbar-brand,
-.navbar-default,
+
 .navbar-default a,
 .navbar-default a:visited,
 .navbar-default .navbar-nav > li > a,
@@ -48,10 +45,20 @@ nav {
 }
 
 .active,
-.navbar-default .navbar-nav > li> a:hover,
 .navbar-default .navbar-nav > .active > a{
   background-color: @purple;
   font-size: 1.6em;
+}
+
+.nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.nav li {
+    display: table-cell;
+    float: none;
 }
 
 .part-section {
