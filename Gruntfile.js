@@ -100,6 +100,26 @@ module.exports = function(grunt) {
         pattern: ['*.html']
       }
     },
+    robotstxt: {
+      prod: {
+        dest: './',
+        policy: [
+          {
+            ua: '*',
+            disallow: ['dist/', 'js/', 'styles/'],
+          },
+          {
+            sitemap: ['http://bayareadm.org/sitemap.xml']
+          },
+          {
+            crawldelay: 100
+          },
+          {
+            host: 'www.bayareadm.org'
+          }
+        ]
+      }
+    },
     watch : {
       css: {
         files: 'styles/*.less',
@@ -120,9 +140,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-injector');
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-robots-txt');
   grunt.loadNpmTasks('grunt-sitemap');
   // Default task.
   grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:dev']);
-  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod', 'sitemap:prod']);
+  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
 
 };

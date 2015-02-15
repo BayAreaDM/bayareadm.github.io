@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: dist/
+Disallow: js/
+Disallow: styles/
+Sitemap: http://bayareadm.org/sitemap.xml
+Crawl-delay: 100
+Host: www.bayareadm.org

@@ -23,6 +23,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-injector": "^0.6.0",
     "grunt-lintspaces": "^0.6.0",
+    "grunt-robots-txt": "^0.3.0",
     "grunt-sitemap": "^1.2.1"
   }
 }
