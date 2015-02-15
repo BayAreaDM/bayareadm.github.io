@@ -78,7 +78,15 @@ module.exports = function(grunt) {
       }
     },
     injector: {
-      index: {
+      dev: {
+        files: {
+          'index.html': [
+            '<%= uglify.dist.dest %>',
+            'dist/badm-<%= pkg.version %>.css'
+          ]
+        }
+      },
+      prod: {
         files: {
           'index.html': [
             '<%= uglify.dist.dest %>',
@@ -109,7 +117,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-injector');
 
   // Default task.
-  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:index']);
-  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:index']);
+  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:dev']);
+  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod']);
 
 };
