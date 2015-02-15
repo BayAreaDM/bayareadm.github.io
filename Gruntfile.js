@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         src: [
           'js/*.js'
         ],
-        dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.js'
+        dest: 'dist/badm-<%= pkg.version %>.min.js'
       }
     },
     jshint: {
@@ -73,23 +73,15 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          'dist/badm-<%= pkg.version %>.min.css' : 'assets/styles/badm.less'
+          'dist/badm-<%= pkg.version %>.min.css' : 'styles/badm.less'
         }
       }
     },
     injector: {
-      dev: {
+      index: {
         files: {
           'index.html': [
-            '<%= uglify.dist.src %>',
-            'dist/badm-<%= pkg.version %>.css'
-          ]
-        }
-      },
-      prod: {
-        files: {
-          'index.html': [
-            '<%= uglify.dist.src %>',
+            '<%= uglify.dist.dest %>',
             'dist/badm-<%= pkg.version %>.min.css'
           ]
         }
@@ -117,7 +109,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-injector');
 
   // Default task.
-  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:dev']);
-  grunt.registerTask('prod', ['concat', 'uglify', 'less:prod', 'injector']);
+  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:index']);
+  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:index']);
 
 };
