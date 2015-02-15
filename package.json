@@ -1,9 +1,10 @@
 {
   "name": "BADM",
+  "title": "Bay Area Dance Marathon",
   "version": "1.0.0",
   "homepage": "http://bayareadm.org",
   "author": {
-    "name": "Matt Gerstman"
+    "name": "Bay Area Dance Marathon"
   },
   "repository": {
     "type": "git",

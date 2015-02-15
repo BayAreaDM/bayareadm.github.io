@@ -1,0 +1,17 @@
+/* ABOUT THIS FILE */
+  Description: We Are People, Not Machines
+  More informations: <http://humanstxt.org/>
+
+/* TEAM */
+Hospital Advisors     Katie  Kendrick
+                      Carly  Yoshida
+
+Finance               Andrew Ho
+Internal              Matt   Gerstman
+External              Amy    Shattan
+
+Family                Mel    Baxter
+Corp Relations        Jon    Kline
+Operations            Sam    Palley
+Morale                Tyler  Pinckard
+Special Events        Nicole Salzman
