@@ -95,6 +95,11 @@ module.exports = function(grunt) {
         }
       }
     },
+    sitemap: {
+      prod: {
+        pattern: ['*.html']
+      }
+    },
     watch : {
       css: {
         files: 'styles/*.less',
@@ -109,15 +114,15 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-lintspaces');
   grunt.loadNpmTasks('grunt-injector');
-
+  grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-sitemap');
   // Default task.
   grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:dev']);
-  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod']);
+  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod', 'sitemap:prod']);
 
 };
