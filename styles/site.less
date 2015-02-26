@@ -2,15 +2,19 @@
 // Navbar
 // --------------------------------------------------
 
-@import "colors.less";
-@import "fonts.less";
-@import "mixins.less";
-@import "z-index.less";
-
 body {
   font-family: "Avenir", "Helvetica", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'GothamBook', "Helvetica", sans-serif;
+  font-weight: bold;
+}
 .nav {
   z-index: @zIndex-10;
 }
@@ -70,6 +74,10 @@ body {
   .m-translateY(-50%);
 }
 
+.section {
+  padding:50px 0;
+}
+
 .section-blue {
   background-color: @blue;
 }
@@ -98,26 +106,25 @@ body {
   background-color: @yellow;
 }
 
-.cmn-graphic {
-  margin:50px 0;
-  float:right;
-}
 
 .large-text {
   font-weight:100;
   font-size:3vh;
-  padding:40px 0;
   text-align: justify;
 }
 
+.section-img {
+  margin:50px;
+}
+.section-text {
+  vertical-align: middle;
+}
 
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 90%;
-  margin-left: 5%;
 }
 
 .embed-container iframe,
@@ -127,8 +134,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  margin-top:50px;
-  height: calc(100% - 100px);
+  height: 100%;
+}
+
+.cmn-graphic {
+  margin:20px auto;
+  width:100%;
 }
 
 @media (max-width: 768px) {

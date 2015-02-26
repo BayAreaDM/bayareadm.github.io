@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-02-22
+ * Bay Area Dance Marathon - 2015-02-26
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -10,8 +10,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'GothamBook';
+  src: url('/assets/fonts/GothamRndBook.eot');
+  src: url('/assets/fonts/GothamRndBook.eot') format('embedded-opentype'), url('/assets/fonts/GothamRndBook.woff2') format('woff2'), url('/assets/fonts/GothamRndBook.woff') format('woff'), url('/assets/fonts/GothamRndBook.ttf') format('truetype'), url('/assets/fonts/GothamRndBook.svg#GothamRndBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Avenir", "Helvetica", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'GothamBook', "Helvetica", sans-serif;
+  font-weight: bold;
 }
 .nav {
   z-index: 1000;
@@ -62,6 +78,9 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.section {
+  padding: 50px 0;
+}
 .section-blue {
   background-color: #006fba;
 }
@@ -83,23 +102,22 @@ body {
 .section-yellow {
   background-color: #f2c418;
 }
-.cmn-graphic {
-  margin: 50px 0;
-  float: right;
-}
 .large-text {
   font-weight: 100;
   font-size: 3vh;
-  padding: 40px 0;
   text-align: justify;
+}
+.section-img {
+  margin: 50px;
+}
+.section-text {
+  vertical-align: middle;
 }
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 90%;
-  margin-left: 5%;
 }
 .embed-container iframe,
 .embed-container object,
@@ -108,8 +126,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  margin-top: 50px;
-  height: calc(100% - 100px);
+  height: 100%;
+}
+.cmn-graphic {
+  margin: 20px auto;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .navbar-default {
@@ -175,5 +196,11 @@ body {
     margin: 2% 0 0 0;
     display: inline-block !important;
   }
+}
+.u-pullLeft {
+  float: left;
+}
+.u-pullRight {
+  float: right;
 }
 /*# sourceMappingURL=badm-1.0.0.css.map */
