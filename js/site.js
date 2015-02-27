@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
   $('#nav').stickyNavbar({
     activeClass: "active",          // Class to be added to highlight nav elements
@@ -22,3 +23,4 @@ $(document).ready(function(){
     $('.navbar-collapse.in').collapse('hide');
   });
 });
+*/

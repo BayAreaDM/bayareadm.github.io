@@ -15,14 +15,30 @@ h6 {
   font-family: 'GothamBook', "Helvetica", sans-serif;
   font-weight: bold;
 }
-.nav {
-  z-index: @zIndex-10;
+
+.nav-logo {
+  max-height: 100%;
+  max-width: 100%%;
+  padding: 10px 0;
 }
 
 .navbar-default {
   color: white;
   background-color:@purple;
   width:100%;
+}
+
+.navbar-links {
+    margin: 70px 0 0 0;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.navbar-links li {
+    display: inline-block;
+    padding-left:23px;
+    font-size: 18px;
 }
 
 .navbar-default a,
@@ -142,91 +158,21 @@ h6 {
   width:100%;
 }
 
-@media (max-width: 768px) {
-  .navbar-default {
-    position: fixed;
-    top:0;
-  }
-  .part-section {
-    height:100vh;
-  }
+.hospital-logo {
+  max-width: 100%;
+  background: white;
 }
 
 
-@media(min-width:769px) {
-  .logo-vertical {
-    display:none;
-  }
-}
-
-@media (min-width:996px) {
-  .nav {
-      margin: 0;
-      display: table;
-      width: 100%;
-      height:50px!important;
-      overflow:hidden;
+@media(max-width:768px) {
+  .navbar-links {
+    margin:10px auto;
+    text-align: justify;
+    display: table;
   }
 
-  .nav li {
-      display: table-cell;
-      float: none;
-      overflow:hidden;
-      vertical-align: top;
-  }
-}
-
-
-// handheld media queries
-// portrait
-@media handheld and (orientation: portrait) {
-  .logo-vertical {
-    display:inline-block!important;
-  }
-  .logo-landscape {
-    width:80%;
-    margin: 2% 0 0 0;
-    display:none!important;
-  }
-}
-
-// landscape
-@media handheld and (orientation: landscape) {
-  .logo-vertical {
-    display:none!important;
-  }
-  .logo-landscape {
-    display:inline-block!important;
-  }
-}
-
-
-
-// iPhone media queries
-// portrait
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 966px)
-and (orientation : portrait) {
-  .logo-vertical {
-    display:inline-block!important;
-  }
-  .logo-landscape {
-    display:none!important;
-  }
-}
-
-// landscape
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 966px)
-and (orientation : landscape) {
-  .logo-vertical {
-    display:none!important;
-  }
-  .logo-landscape {
-    width:80%;
-    margin: 2% 0 0 0;
-    display:inline-block!important;
+  .navbar-links li {
+    padding:0;
+    display: table-cell;
   }
 }

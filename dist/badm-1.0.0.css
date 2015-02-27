@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-02-26
+ * Bay Area Dance Marathon - 2015-02-27
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -29,13 +29,26 @@ h6 {
   font-family: 'GothamBook', "Helvetica", sans-serif;
   font-weight: bold;
 }
-.nav {
-  z-index: 1000;
+.nav-logo {
+  max-height: 100%;
+  max-width: 100%%;
+  padding: 10px 0;
 }
 .navbar-default {
   color: white;
   background-color: #8379b9;
   width: 100%;
+}
+.navbar-links {
+  margin: 70px 0 0 0;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+.navbar-links li {
+  display: inline-block;
+  padding-left: 23px;
+  font-size: 18px;
 }
 .navbar-default a,
 .navbar-default a:visited,
@@ -132,69 +145,19 @@ h6 {
   margin: 20px auto;
   width: 100%;
 }
+.hospital-logo {
+  max-width: 100%;
+  background: white;
+}
 @media (max-width: 768px) {
-  .navbar-default {
-    position: fixed;
-    top: 0;
-  }
-  .part-section {
-    height: 100vh;
-  }
-}
-@media (min-width: 769px) {
-  .logo-vertical {
-    display: none;
-  }
-}
-@media (min-width: 996px) {
-  .nav {
-    margin: 0;
+  .navbar-links {
+    margin: 10px auto;
+    text-align: justify;
     display: table;
-    width: 100%;
-    height: 50px!important;
-    overflow: hidden;
   }
-  .nav li {
+  .navbar-links li {
+    padding: 0;
     display: table-cell;
-    float: none;
-    overflow: hidden;
-    vertical-align: top;
-  }
-}
-@media handheld and (orientation: portrait) {
-  .logo-vertical {
-    display: inline-block !important;
-  }
-  .logo-landscape {
-    width: 80%;
-    margin: 2% 0 0 0;
-    display: none!important;
-  }
-}
-@media handheld and (orientation: landscape) {
-  .logo-vertical {
-    display: none!important;
-  }
-  .logo-landscape {
-    display: inline-block !important;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: portrait) {
-  .logo-vertical {
-    display: inline-block !important;
-  }
-  .logo-landscape {
-    display: none!important;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: landscape) {
-  .logo-vertical {
-    display: none!important;
-  }
-  .logo-landscape {
-    width: 80%;
-    margin: 2% 0 0 0;
-    display: inline-block !important;
   }
 }
 .u-pullLeft {
