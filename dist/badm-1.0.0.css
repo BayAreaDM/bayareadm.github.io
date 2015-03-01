@@ -295,7 +295,7 @@ ul {
   border-bottom: 1px solid white;
 }
 .navbar-links {
-  margin: 75px 0 0 0;
+  margin: 20px 0 0 0;
   display: inline-block;
   width: 100%;
   text-align: right;
@@ -304,6 +304,9 @@ ul {
   display: inline-block;
   padding-left: 23px;
   font-size: 18px;
+}
+.social-media li {
+  font-size: 25px;
 }
 .navbar-default a,
 .navbar-default a:visited,
