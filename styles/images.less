@@ -5,7 +5,6 @@
   background-size: 100%;
   display:block;
   background-repeat: no-repeat;
-  height:50vh;
   opacity:0.8;
 }
 
@@ -31,15 +30,84 @@
   background-image: url("/assets/images/social-services.jpg");
 }
 
-@media(max-width:768px) {
-  .img {
-    height:33vh;
-    position:relative;
-  }
-}
-
 @media(min-width:768px) {
   .img {
     background-position:100% 50%;
+    height:50vh;
+  }
+  .banner {
+    height:50vh;
   }
 }
+
+// iPhone media queries
+// portrait
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 966px)
+and (orientation : portrait) {
+  .img,
+  .banner {
+    height:33vh;
+    position:relative;
+  }
+  .stand-for {
+    position:absolute;
+    width:350px;
+    margin-left:-175px;
+    left:50%;
+    bottom:0;
+  }
+}
+
+// landscape
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 966px)
+and (orientation : landscape) {
+
+  .banner {
+    position:relative;
+  }
+
+  .img,
+  .banner {
+    height:100vh;
+  }
+
+  .stand-for {
+    position:absolute;
+    width:350px;
+    margin-left:-175px;
+    left:50%;
+    bottom:0;
+  }
+
+}
+
+
+
+/*
+// handheld media queries
+// portrait
+@media handheld and (orientation: portrait) {
+  .logo-vertical {
+    display:inline-block!important;
+  }
+  .logo-landscape {
+    width:80%;
+    margin: 2% 0 0 0;
+    display:none!important;
+  }
+}
+
+// landscape
+@media handheld and (orientation: landscape) {
+  .logo-vertical {
+    display:none!important;
+  }
+  .logo-landscape {
+    display:inline-block!important;
+  }
+}
+*/
