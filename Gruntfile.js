@@ -170,7 +170,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sitemap');
   // Default task.
   grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'bake', 'injector:dev']);
-  grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
+  grunt.registerTask('prod', ['uglify', 'less:prod', 'bake', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
 
   grunt.registerTask('default', 'dev');
 
