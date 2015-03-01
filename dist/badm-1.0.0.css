@@ -212,52 +212,6 @@
 .social-services {
   background-image: url("/assets/images/social-services.jpg");
 }
-@media (min-width: 768px) {
-  .img {
-    background-position: 100% 50%;
-    height: 50vh;
-  }
-  .banner {
-    height: 50vh;
-  }
-}
-@media (max-width: 768px) {
-  .img,
-  .banner {
-    height: 33vh;
-    position: relative;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: portrait) {
-  .img,
-  .banner {
-    height: 33vh;
-    position: relative;
-  }
-  .banner-text {
-    position: absolute;
-    width: 350px;
-    margin-left: -175px;
-    left: 50%;
-    bottom: 0;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: landscape) {
-  .banner {
-    position: relative;
-  }
-  .img,
-  .banner {
-    height: 100vh;
-  }
-  .banner-text {
-    position: absolute;
-    width: 350px;
-    margin-left: -175px;
-    left: 50%;
-    bottom: 0;
-  }
-}
 /*
 // handheld media queries
 // portrait
@@ -376,6 +330,58 @@ a.active {
   .navbar-links li {
     padding: 0;
     display: table-cell;
+  }
+}
+@media (min-width: 768px) {
+  .img {
+    background-position: 100% 50%;
+    height: 50vh;
+  }
+  .banner {
+    height: 50vh;
+  }
+}
+@media (max-width: 768px) {
+  .img,
+  .banner {
+    height: 33vh;
+    position: relative;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: portrait) {
+  .img,
+  .banner {
+    height: 33vh;
+    position: relative;
+  }
+  .banner-text {
+    position: absolute;
+    width: 350px;
+    margin-left: -175px;
+    left: 50%;
+    bottom: 0;
+  }
+  .navbar-links li {
+    border-left: 1px solid white;
+  }
+  .navbar-links li:first-child {
+    border: none;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: landscape) {
+  .banner {
+    position: relative;
+  }
+  .img,
+  .banner {
+    height: 100vh;
+  }
+  .banner-text {
+    position: absolute;
+    width: 350px;
+    margin-left: -175px;
+    left: 50%;
+    bottom: 0;
   }
 }
 .u-pullLeft {
