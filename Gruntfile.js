@@ -18,6 +18,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
+          'bower_components/readmore/readmore.js',
           'js/*.js'
         ],
         dest: 'dist/badm-<%= pkg.version %>.min.js'
@@ -25,7 +26,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       files: [
-        '<%= uglify.dist.src %>',
+        'js/*.js',
         'Gruntfile.js'
         ],
       gruntfile: {
@@ -81,7 +82,15 @@ module.exports = function(grunt) {
       dev: {
         files: {
           'index.html': [
-            '<%= uglify.dist.dest %>',
+            '<%= uglify.dist.src %>',
+            'dist/badm-<%= pkg.version %>.css'
+          ],
+          'funds.html': [
+            '<%= uglify.dist.src %>',
+            'dist/badm-<%= pkg.version %>.css'
+          ],
+          'get-involved.html': [
+            '<%= uglify.dist.src %>',
             'dist/badm-<%= pkg.version %>.css'
           ]
         }
@@ -92,6 +101,18 @@ module.exports = function(grunt) {
             '<%= uglify.dist.dest %>',
             'dist/badm-<%= pkg.version %>.min.css'
           ]
+        }
+      }
+    },
+    bake: {
+      badm: {
+        options: {
+
+        },
+        files: {
+          'index.html'          : 'templates/index.html',
+          'funds.html'          : 'templates/funds.html',
+          'get-involved.html'   : 'templates/get-involved.html',
         }
       }
     },
@@ -128,12 +149,17 @@ module.exports = function(grunt) {
       js: {
         files: 'js/*.js',
         tasks: ['lintspaces', 'jshint']
+      },
+      html: {
+        files: 'templates/*.html',
+        tasks: ['bake', 'injector:dev']
       }
     }
 });
 
   // These plugins provide necessary tasks.
 
+  grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -143,7 +169,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-robots-txt');
   grunt.loadNpmTasks('grunt-sitemap');
   // Default task.
-  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'injector:dev']);
+  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'bake', 'injector:dev']);
   grunt.registerTask('prod', ['uglify', 'less:prod', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
+
+  grunt.registerTask('default', 'dev');
 
 };
