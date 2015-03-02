@@ -10,29 +10,18 @@ module.exports = function(grunt) {
       '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
       ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;\n' +
       ' */',
-    // Task configuration.
-    uglify: {
-      options: {
-        banner: '<%= banner %>',
-        sourceMap: true
-      },
-      dist: {
-        src: [
-          'bower_components/readmore/readmore.js',
-          'js/*.js'
-        ],
-        dest: 'dist/badm-<%= pkg.version %>.min.js'
-      }
+    runtime: (new Date()).getTime(),
+    dependencies: {
+      dev: [
+            '<%= uglify.dist.src %>',
+            'dist/badm-<%= runtime %>.css'
+      ],
+      prod: [
+            '<%= uglify.dist.dest %>',
+            'dist/badm-<%= runtime %>.min.css'
+      ]
     },
-    jshint: {
-      files: [
-        'js/*.js',
-        'Gruntfile.js'
-        ],
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-    },
+    clean: ['dist/*'],
     lintspaces: {
       javascript: {
         src: [
@@ -49,6 +38,28 @@ module.exports = function(grunt) {
         }
       }
     },
+    jshint: {
+      files: [
+        'js/*.js',
+        'Gruntfile.js'
+        ],
+      gruntfile: {
+        src: 'Gruntfile.js'
+      },
+    },
+    uglify: {
+      options: {
+        banner: '<%= banner %>',
+        sourceMap: true
+      },
+      dist: {
+        src: [
+          'bower_components/readmore/readmore.js',
+          'js/*.js'
+        ],
+        dest: 'dist/badm-<%= runtime %>.min.js'
+      }
+    },
     less: {
       dev: {
         options: {
@@ -56,11 +67,11 @@ module.exports = function(grunt) {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: 'badm-<%= pkg.version %>.css.map',
-          sourceMapFilename: 'dist/badm-<%= pkg.version %>.css.map'
+          sourceMapURL: 'badm-<%= runtime %>.css.map',
+          sourceMapFilename: 'dist/badm-<%= runtime %>.css.map'
         },
         files: {
-          'dist/badm-<%= pkg.version %>.css': 'styles/badm.less'
+          'dist/badm-<%= runtime %>.css': 'styles/badm.less'
         }
       },
       prod: {
@@ -70,37 +81,11 @@ module.exports = function(grunt) {
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: 'badm.css.map',
-          sourceMapFilename: 'dist/badm-<%= pkg.version %>.css.map',
+          sourceMapFilename: 'dist/badm-<%= runtime %>.css.map',
           cleancss: true
         },
         files: {
-          'dist/badm-<%= pkg.version %>.min.css' : 'styles/badm.less'
-        }
-      }
-    },
-    injector: {
-      dev: {
-        files: {
-          'index.html': [
-            '<%= uglify.dist.src %>',
-            'dist/badm-<%= pkg.version %>.css'
-          ],
-          'funds.html': [
-            '<%= uglify.dist.src %>',
-            'dist/badm-<%= pkg.version %>.css'
-          ],
-          'get-involved.html': [
-            '<%= uglify.dist.src %>',
-            'dist/badm-<%= pkg.version %>.css'
-          ]
-        }
-      },
-      prod: {
-        files: {
-          'index.html': [
-            '<%= uglify.dist.dest %>',
-            'dist/badm-<%= pkg.version %>.min.css'
-          ]
+          'dist/badm-<%= runtime %>.min.css' : 'styles/badm.less'
         }
       }
     },
@@ -113,6 +98,22 @@ module.exports = function(grunt) {
           'index.html'          : 'templates/index.html',
           'funds.html'          : 'templates/funds.html',
           'get-involved.html'   : 'templates/get-involved.html',
+        }
+      }
+    },
+    injector: {
+      dev: {
+        files: {
+          'index.html': '<%= dependencies.dev %>',
+          'funds.html': '<%= dependencies.dev %>',
+          'get-involved.html': '<%= dependencies.dev %>'
+        }
+      },
+      prod: {
+        files: {
+          'index.html': '<%= dependencies.prod %>',
+          'funds.html': '<%= dependencies.prod %>',
+          'get-involved.html': '<%= dependencies.prod %>'
         }
       }
     },
@@ -160,6 +161,7 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
 
   grunt.loadNpmTasks('grunt-bake');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -169,8 +171,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-robots-txt');
   grunt.loadNpmTasks('grunt-sitemap');
   // Default task.
-  grunt.registerTask('dev', ['lintspaces', 'jshint', 'less:dev', 'bake', 'injector:dev']);
-  grunt.registerTask('prod', ['uglify', 'less:prod', 'bake', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
+  grunt.registerTask('dev', ['clean', 'lintspaces', 'jshint', 'less:dev', 'bake', 'injector:dev']);
+  grunt.registerTask('prod', ['clean', 'uglify', 'less:prod', 'bake', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
 
   grunt.registerTask('default', 'dev');
 
