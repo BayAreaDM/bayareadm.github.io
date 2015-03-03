@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     dependencies: {
       dev: [
             '<%= uglify.dist.src %>',
-            'dist/badm-<%= runtime %>.css'
+            'dist/badm.css'
       ],
       prod: [
             '<%= uglify.dist.dest %>',
@@ -67,11 +67,11 @@ module.exports = function(grunt) {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: 'badm-<%= runtime %>.css.map',
-          sourceMapFilename: 'dist/badm-<%= runtime %>.css.map'
+          sourceMapURL: 'badm.css.map',
+          sourceMapFilename: 'dist/badm.css.map'
         },
         files: {
-          'dist/badm-<%= runtime %>.css': 'styles/badm.less'
+          'dist/badm.css': 'styles/badm.less'
         }
       },
       prod: {
