@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 body {
-  font-family: "Avenir", "Helvetica", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding-bottom:20px;
 }
 
@@ -11,37 +11,108 @@ ul {
   padding:0;
 }
 
+.navbar-default {
+  color: white;
+  background: @red;
+  width:100%;
+  height:100px;
+}
+
+
+.nav-logo {
+  height:@navbar-height;
+  padding: 10px 0;
+  float:left;
+}
+
+.nav-title {
+  font-size:2.1em;
+  margin:27px 30px;
+  float:left;
+}
+
+.navbar-links {
+  width: 100%;
+  height:@navbar-height;
+  display:block;
+  list-style:none;
+
+}
+
+.navbar-links li {
+  display: inline-block;
+  font-size: 1.5em;
+  margin:35px 0 0 40px;
+}
+
+
+// banner form section
+
+.banner-text {
+  background: @yellow;
+  color:white;
+  padding:10px;
+  width:205px;
+  margin:0;
+}
+
+
+// triangle
+.triangle-up-right {
+  width: 0;
+  height: 0;
+  padding-left:10%;
+  padding-top: 10%;
+  overflow: hidden;
+  margin:0;
+}
+.triangle-up-right:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left:-500px;
+  margin-top:-500px;
+
+  border-left: 500px solid transparent;
+}
+
+.triangle-yellow:after {
+  border-top: 500px solid @yellow;
+}
+
+.triangle-red:after {
+  border-top: 500px solid @red;
+}
+
+
+.header-form-control {
+  border: none;
+  border-radius:0;
+  margin:20px 0;
+}
+
+.btn {
+  color:white;
+  font-size:1.5em;
+}
+
+.btn-red {
+  background-color:@red;
+}
+
+
+.banner-form {
+  margin-top:5%;
+}
+
+
 .benioff-address {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size:13px;
   margin:10px 0 0 10px;
 }
-.nav-logo {
-  max-height: 100%;
-  max-width: 100%;
-  padding: 10px 0;
-}
 
-.navbar-default {
-  color: white;
-  background: @blue-transparent;
-  width:100%;
-  padding-bottom:10px;
-  border-bottom: 1px solid white;
-}
-
-.navbar-links {
-  margin: 20px 0 0 0;
-  display: inline-block;
-  width: 100%;
-  text-align: right;
-}
-
-.navbar-links li {
-  display: inline-block;
-  padding-left:23px;
-  font-size: 18px;
-}
 
 .social-media li {
   font-size:25px;
@@ -54,10 +125,6 @@ ul {
   color:white!important;
 }
 
-.banner-text {
-  color:white;
-  padding:5% 0;
-}
 
 .large-text {
   font-weight:100;

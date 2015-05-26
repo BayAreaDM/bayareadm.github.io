@@ -155,12 +155,32 @@ module.exports = function(grunt) {
         files: 'templates/*.html',
         tasks: ['bake', 'injector:dev']
       }
+    },
+    browserSync: {
+      bsFiles: {
+        src : [
+          'index.html',
+          'dist/*.css'
+        ]
+      },
+      options: {
+        port: 8888,
+        open: 'ui',
+        ui: {
+          port: 9999
+        },
+        server: {
+          baseDir: "./",
+          target:"http://localhost"
+        },
+      }
     }
 });
 
   // These plugins provide necessary tasks.
 
   grunt.loadNpmTasks('grunt-bake');
+  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -174,6 +194,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['clean', 'lintspaces', 'jshint', 'less:dev', 'bake', 'injector:dev']);
   grunt.registerTask('prod', ['clean', 'uglify', 'less:prod', 'bake', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
 
+  grunt.registerTask('server', 'browserSync');
   grunt.registerTask('default', 'dev');
 
 };
