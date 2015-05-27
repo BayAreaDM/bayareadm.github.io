@@ -16,6 +16,7 @@ ul {
   background: @red;
   width:100%;
   height:100px;
+  margin:0;
 }
 
 
@@ -45,15 +46,37 @@ ul {
   margin:35px 0 0 40px;
 }
 
+.intro {
+  margin:50px auto 50px auto;
+}
+
+.img {
+  height:55%;
+  min-height:500px;
+  max-height:585px;
+  display:flex;
+}
+
+
+.banner-body {
+  position:absolute;
+  top:10%;
+}
 
 // banner form section
-
-.banner-text {
-  background: @yellow;
+.banner-header {
   color:white;
   padding:10px;
   width:205px;
   margin:0;
+}
+
+.header-yellow {
+  background: @yellow;
+}
+
+.header-red {
+  background: @red;
 }
 
 
@@ -61,8 +84,8 @@ ul {
 .triangle-up-right {
   width: 0;
   height: 0;
-  padding-left:10%;
-  padding-top: 10%;
+  padding-left:25px;
+  padding-top: 25px;
   overflow: hidden;
   margin:0;
 }
@@ -101,10 +124,58 @@ ul {
   background-color:@red;
 }
 
-
-.banner-form {
-  margin-top:5%;
+.kai-header {
+  background-color:@red;
 }
+
+.text-kai {
+  font-size:1.5em;
+  margin:15px 0 0 0;
+}
+
+.container-social {
+  z-index:@zIndex-1;
+}
+
+.social {
+  position:absolute;
+  top:-30px;
+  height:60px;
+  width:220px;
+  background: @light-blue;
+  color: white;
+  font-size:3em;
+}
+
+.social-text {
+
+}
+
+.fa-social {
+  padding:10px;
+}
+
+.divider {
+  display:inline-block;
+  height:80%;
+  width:2.5px;
+  position: relative;
+  top:10%;
+}
+
+.divider-purple {
+  background-color:@dark-purple;
+
+}
+
+
+
+
+
+
+
+
+
 
 
 .benioff-address {
@@ -169,6 +240,7 @@ a.active {
   overflow:hidden;
 }
 
+/*
 @media(max-width:768px) {
 
   .banner-text {
@@ -197,7 +269,6 @@ a.active {
 
 @media(min-width:768px) {
   .img {
-    background-position:100% 50%;
     height:50vh;
   }
   .banner {
@@ -298,3 +369,4 @@ and (orientation : landscape) {
   }
 
 }
+*/

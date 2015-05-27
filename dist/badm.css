@@ -13,7 +13,7 @@
   background-color: #aab52b;
 }
 .section-light-blue {
-  background-color: #009ad9;
+  background-color: #0098d8;
 }
 .section-orange {
   background-color: #f47b29;
@@ -37,7 +37,7 @@
   color: #aab52b;
 }
 .text-light-blue {
-  color: #009ad9;
+  color: #0098d8;
 }
 .text-orange {
   color: #f47b29;
@@ -210,6 +210,7 @@
   -o-background-size: cover;
   background-size: 100%;
   display: block;
+  width: 100%;
   background-repeat: no-repeat;
 }
 .nate {
@@ -252,6 +253,7 @@ ul {
   background: #ee2752;
   width: 100%;
   height: 100px;
+  margin: 0;
 }
 .nav-logo {
   height: 100px;
@@ -274,18 +276,36 @@ ul {
   font-size: 1.5em;
   margin: 35px 0 0 40px;
 }
-.banner-text {
-  background: #f8be17;
+.intro {
+  margin: 50px auto 50px auto;
+}
+.img {
+  height: 55%;
+  min-height: 500px;
+  max-height: 585px;
+  display: flex;
+}
+.banner-body {
+  position: absolute;
+  top: 10%;
+}
+.banner-header {
   color: white;
   padding: 10px;
   width: 205px;
   margin: 0;
 }
+.header-yellow {
+  background: #f8be17;
+}
+.header-red {
+  background: #ee2752;
+}
 .triangle-up-right {
   width: 0;
   height: 0;
-  padding-left: 10%;
-  padding-top: 10%;
+  padding-left: 25px;
+  padding-top: 25px;
   overflow: hidden;
   margin: 0;
 }
@@ -316,8 +336,37 @@ ul {
 .btn-red {
   background-color: #ee2752;
 }
-.banner-form {
-  margin-top: 5%;
+.kai-header {
+  background-color: #ee2752;
+}
+.text-kai {
+  font-size: 1.5em;
+  margin: 15px 0 0 0;
+}
+.container-social {
+  z-index: 100;
+}
+.social {
+  position: absolute;
+  top: -30px;
+  height: 60px;
+  width: 220px;
+  background: #0098d8;
+  color: white;
+  font-size: 3em;
+}
+.fa-social {
+  padding: 10px;
+}
+.divider {
+  display: inline-block;
+  height: 80%;
+  width: 2.5px;
+  position: relative;
+  top: 10%;
+}
+.divider-purple {
+  background-color: #413975;
 }
 .benioff-address {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -366,111 +415,136 @@ a.active {
 .long-text {
   overflow: hidden;
 }
-@media (max-width: 768px) {
+/*
+@media(max-width:768px) {
+
   .banner-text {
-    padding: 0;
+    padding:0;
   }
   .banner-text h1 {
-    font-size: 30px;
+    font-size:30px;
+
   }
   .navbar-container {
-    width: 100%;
-    padding: 0;
+    width:100%;
+    padding:0;
   }
   .navbar-links {
-    margin: 10px auto;
+    margin:10px auto;
     text-align: center;
     display: table;
   }
+
   .navbar-links li {
-    padding: 0;
+    padding:0;
     display: table-cell;
   }
 }
-@media (min-width: 768px) {
+
+
+@media(min-width:768px) {
   .img {
-    background-position: 100% 50%;
-    height: 50vh;
+    height:50vh;
   }
   .banner {
-    height: 50vh;
+    height:50vh;
   }
 }
-@media (max-width: 768px) {
+
+@media(max-width: 768px) {
   .img,
   .banner {
-    height: 33vh;
-    position: relative;
+    height:33vh;
+    position:relative;
   }
   .banner-text {
-    position: absolute;
-    width: 100%;
-    margin-left: -50%;
-    left: 50%;
-    bottom: 0;
+    position:absolute;
+    width:100%;
+    margin-left:-50%;
+    left:50%;
+    bottom:0;
   }
   .banner-text h1 {
-    font-size: 28px;
+    font-size:28px;
   }
 }
-@media (max-width: 550px) {
+@media(max-width: 550px) {
   .img,
   .banner {
-    height: 20vh;
-    position: relative;
+    height:20vh;
+    position:relative;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: portrait) {
+
+// iPhone media queries
+// portrait
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 966px)
+and (orientation : portrait) {
   .img,
   .banner {
-    height: 33vh;
-    position: relative;
+    height:33vh;
+    position:relative;
   }
   .banner-text {
-    position: absolute;
-    width: 100%;
-    margin-left: -50%;
-    left: 50%;
-    bottom: 0;
+    position:absolute;
+    width:100%;
+    margin-left:-50%;
+    left:50%;
+    bottom:0;
   }
   .banner-text h1 {
-    font-size: 26px;
+    font-size:26px;
   }
   .navbar-links li {
-    border-left: 1px solid white;
+    border-left:1px solid white;
   }
   .navbar-links li:first-child {
-    border: none;
+    border:none;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 966px) and (orientation: landscape) {
+
+// landscape
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 966px)
+and (orientation : landscape) {
+
   .banner {
-    position: relative;
+    position:relative;
   }
+
   .img,
   .banner {
-    height: 100vh;
+    height:100vh;
   }
+
   .banner-text {
-    position: absolute;
-    width: 100%;
-    margin-left: -50%;
-    left: 50%;
-    bottom: 0;
+    position:absolute;
+    width:100%;
+    margin-left:-50%;
+    left:50%;
+    bottom:0;
   }
   .text-child-life {
-    max-height: 65px;
+    max-height:65px;
   }
+
   .text-charity-care {
-    max-height: 105px;
+    max-height:105px;
   }
+
   .text-research {
-    max-height: 65px;
+    max-height:65px;
   }
+
   .text-social-services {
-    max-height: 105px;
+    max-height:105px;
   }
+
 }
+*/
 .u-pullLeft {
   float: left;
 }
