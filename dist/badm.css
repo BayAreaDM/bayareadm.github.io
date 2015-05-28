@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-05-26
+ * Bay Area Dance Marathon - 2015-05-28
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -22,7 +22,7 @@
   background-color: #8379b9;
 }
 .section-red {
-  background-color: #ee2752;
+  background-color: #c61f4b;
 }
 .section-yellow {
   background-color: #f8be17;
@@ -46,7 +46,7 @@
   color: #8379b9;
 }
 .text-red {
-  color: #ee2752;
+  color: #c61f4b;
 }
 .text-yellow {
   color: #f8be17;
@@ -216,18 +216,18 @@
 .nate {
   background-image: url("/assets/images/nate.jpg");
 }
+.kai {
+  background-image: url("/assets/images/kai-banner.jpg");
+}
+.countdown {
+  background-image: url("/assets/images/countdown.jpg");
+}
 .cars {
   background-position: 100% 40%!important;
   background-image: url("/assets/images/cars.jpg");
 }
 .laughing {
   background-image: url("/assets/images/laughing.jpg");
-}
-.kai-banner {
-  background-image: url("/assets/images/kai-banner.jpg");
-}
-.kai {
-  background-image: url("/assets/images/kai-portrait.jpg");
 }
 .kai-landscape {
   background-image: url("/assets/images/kai-landscape.jpg");
@@ -245,12 +245,25 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   padding-bottom: 20px;
 }
+section {
+  display: block;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-weight: bold;
+}
 ul {
   padding: 0;
 }
 .navbar-default {
   color: white;
-  background: #ee2752;
+  background: #c61f4b;
   width: 100%;
   height: 100px;
   margin: 0;
@@ -287,7 +300,8 @@ ul {
 }
 .banner-body {
   position: absolute;
-  top: 10%;
+  top: 15%;
+  color: white;
 }
 .banner-header {
   color: white;
@@ -299,30 +313,7 @@ ul {
   background: #f8be17;
 }
 .header-red {
-  background: #ee2752;
-}
-.triangle-up-right {
-  width: 0;
-  height: 0;
-  padding-left: 25px;
-  padding-top: 25px;
-  overflow: hidden;
-  margin: 0;
-}
-.triangle-up-right:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  margin-left: -500px;
-  margin-top: -500px;
-  border-left: 500px solid transparent;
-}
-.triangle-yellow:after {
-  border-top: 500px solid #f8be17;
-}
-.triangle-red:after {
-  border-top: 500px solid #ee2752;
+  background: #c61f4b;
 }
 .header-form-control {
   border: none;
@@ -334,10 +325,10 @@ ul {
   font-size: 1.5em;
 }
 .btn-red {
-  background-color: #ee2752;
+  background-color: #c61f4b;
 }
 .kai-header {
-  background-color: #ee2752;
+  background-color: #c61f4b;
 }
 .text-kai {
   font-size: 1.5em;
@@ -367,6 +358,23 @@ ul {
 }
 .divider-purple {
   background-color: #413975;
+}
+.section-benefitting {
+  text-align: center;
+}
+.benefitting {
+  color: white;
+  background-color: #c61f4b;
+  width: 300px;
+  padding: 10px 50px;
+  margin: 50px 0 0 0;
+}
+.benefitting-wrapper {
+  width: 300px;
+  display: inline-block;
+}
+.triangle-benefitting {
+  margin: 0 0 0 115px;
 }
 .benioff-address {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -545,10 +553,56 @@ and (orientation : landscape) {
 
 }
 */
+.triangle-up-right {
+  width: 0;
+  height: 0;
+  padding-left: 25px;
+  padding-top: 25px;
+  overflow: hidden;
+  margin: 0;
+}
+.triangle-up-right:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -500px;
+  margin-top: -500px;
+  border-left: 500px solid transparent;
+}
+.triangle-down {
+  width: 20%;
+  height: 0;
+  padding-left: 10%;
+  padding-top: 10%;
+  overflow: hidden;
+}
+.triangle-down:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -500px;
+  margin-top: -500px;
+  border-left: 500px solid transparent;
+  border-right: 500px solid transparent;
+}
+.triangle-yellow:after {
+  border-top: 500px solid #f8be17;
+}
+.triangle-red:after {
+  border-top: 500px solid #c61f4b;
+}
+.triangle-dark-red:after {
+  border-top: 500px solid #a71a46;
+}
 .u-pullLeft {
   float: left;
 }
 .u-pullRight {
   float: right;
+}
+.u-relative {
+  position: relative;
 }
 /*# sourceMappingURL=badm.css.map */

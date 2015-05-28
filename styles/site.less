@@ -7,6 +7,17 @@ body {
   padding-bottom:20px;
 }
 
+section {
+  display:block;
+  width:100%;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-weight: bold;
+}
+
 ul {
   padding:0;
 }
@@ -60,7 +71,9 @@ ul {
 
 .banner-body {
   position:absolute;
-  top:10%;
+  top:15%;
+  color:white;
+
 }
 
 // banner form section
@@ -78,36 +91,6 @@ ul {
 .header-red {
   background: @red;
 }
-
-
-// triangle
-.triangle-up-right {
-  width: 0;
-  height: 0;
-  padding-left:25px;
-  padding-top: 25px;
-  overflow: hidden;
-  margin:0;
-}
-.triangle-up-right:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  margin-left:-500px;
-  margin-top:-500px;
-
-  border-left: 500px solid transparent;
-}
-
-.triangle-yellow:after {
-  border-top: 500px solid @yellow;
-}
-
-.triangle-red:after {
-  border-top: 500px solid @red;
-}
-
 
 .header-form-control {
   border: none;
@@ -168,14 +151,26 @@ ul {
 
 }
 
+.section-benefitting {
+  text-align: center;
+}
 
+.benefitting {
+  color:white;
+  background-color: @red;
+  width:300px;
+  padding:10px 50px;
+  margin:50px 0 0 0;
+}
 
+.benefitting-wrapper {
+  width:300px;
+  display: inline-block;
+}
 
-
-
-
-
-
+.triangle-benefitting {
+  margin:0 0 0 115px;
+}
 
 
 .benioff-address {
