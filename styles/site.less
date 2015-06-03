@@ -3,8 +3,9 @@
 // --------------------------------------------------
 
 body {
-  font-family: 'novecento_sans_wide_bookbold', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding-bottom:20px;
+  font-size: 16px;
 }
 
 section {
@@ -12,7 +13,9 @@ section {
   height:33vh;
   text-align: center;
   display:flex;
+  display:-webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   justify-content: center;
 }
 
@@ -20,11 +23,20 @@ h1, h2, h3, h4, h5, h6 {
   color:white;
   text-transform: uppercase;
   text-align: center;
+  font-family: 'novecento_sans_wide_bookbold', sans-serif;
   font-weight: bold;
 }
 
 ul {
   padding:0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.btn {
+  font-family: 'novecento_sans_wide_bookbold', sans-serif;
 }
 
 .navbar-default {
@@ -43,10 +55,15 @@ ul {
 }
 
 .nav-title {
-  margin:27px 30px;
+  margin-top:15px;
   float:left;
-  color:white;
+  font-size:4.5em;
+  text-align: left;
+}
 
+// make badm logo white contrary to icomoonm font
+.nav-title *:before {
+  color:white!important;
 }
 
 .navbar-links {
@@ -54,6 +71,7 @@ ul {
   height:@navbar-height;
   display:block;
   list-style:none;
+  text-align: right;
 
   a {
     color:white;
@@ -63,7 +81,13 @@ ul {
 
 .navbar-links li {
   display: inline-block;
-  margin:35px 0 0 40px;
+  padding:35px 20px 0 20px;
+}
+
+.nav-sign-up {
+  background: @yellow;
+  height: 100%;
+
 }
 
 .intro {
@@ -75,6 +99,7 @@ ul {
   min-height:500px;
   max-height:585px;
   display:flex;
+  display:-webkit-flex;
 }
 
 .header {
@@ -99,10 +124,31 @@ ul {
   background-color:@yellow;
 }
 
+.lead {
+  font-size: 1.5em;
+  line-height: 40px;
+}
+
+.support-icons {
+  font-size: 3.5em;
+}
+
 
 .bay-bash {
   background-color:#383935;
   color:white;
+}
+
+.bay-bash .icon-BB {
+  font-size:10em;
+  display: block;
+}
+
+.bay-bash-body {
+  font-size: 1em;
+  display:block;
+  margin: 10px;
+  line-height:30px;
 }
 
 .btn-outline {
@@ -113,6 +159,13 @@ ul {
   padding:20px;
   text-align: center;
   text-transform: uppercase;
+  color:white;
+  outline: none;
+}
+
+.btn-outline:visited, .btn-outline:active, .btn-outline:focus {
+  color:white;
+  outline: none;
 }
 
 .btn-outline:hover {
