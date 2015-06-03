@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-05-28
+ * Bay Area Dance Marathon - 2015-06-02
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -25,7 +25,7 @@
   background-color: #c61f4b;
 }
 .section-yellow {
-  background-color: #f8be17;
+  background-color: #f4c300;
 }
 .text-black {
   color: black!important;
@@ -49,7 +49,7 @@
   color: #c61f4b;
 }
 .text-yellow {
-  color: #f8be17;
+  color: #f4c300;
 }
 .section-black-gradient {
   background: #292929;
@@ -64,16 +64,9 @@
   color: white!important;
 }
 @font-face {
-  font-family: 'Avenir';
-  src: url('/assets/fonts/avenirltstd-light-webfont.eot');
-  src: url('/assets/fonts/avenirltstd-light-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/avenirltstd-light-webfont.woff2') format('woff2'), url('/assets/fonts/avenirltstd-light-webfont.woff') format('woff'), url('/assets/fonts/avenirltstd-light-webfont.ttf') format('truetype'), url('/assets/fonts/avenirltstd-light-webfont.svg#avenir_lt_std35_light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GothamBook';
-  src: url('/assets/fonts/GothamRndBook.eot');
-  src: url('/assets/fonts/GothamRndBook.eot') format('embedded-opentype'), url('/assets/fonts/GothamRndBook.woff2') format('woff2'), url('/assets/fonts/GothamRndBook.woff') format('woff'), url('/assets/fonts/GothamRndBook.ttf') format('truetype'), url('/assets/fonts/GothamRndBook.svg#GothamRndBook') format('svg');
+  font-family: 'novecento_sans_wide_bookbold';
+  src: url('Novecentosanswide-Bold-webfont.eot');
+  src: url('Novecentosanswide-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('Novecentosanswide-Bold-webfont.woff2') format('woff2'), url('Novecentosanswide-Bold-webfont.woff') format('woff'), url('Novecentosanswide-Bold-webfont.ttf') format('truetype'), url('Novecentosanswide-Bold-webfont.svg#novecento_sans_wide_bookbold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -213,6 +206,12 @@
   width: 100%;
   background-repeat: no-repeat;
 }
+.header-background {
+  background-image: url("/assets/images/header.jpg");
+}
+.purple-girl {
+  background-image: url("/assets/images/purple-girl.jpg");
+}
 .nate {
   background-image: url("/assets/images/nate.jpg");
 }
@@ -242,12 +241,16 @@
   background-image: url("/assets/images/social-services.jpg");
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'novecento_sans_wide_bookbold', sans-serif;
   padding-bottom: 20px;
 }
 section {
-  display: block;
   width: 100%;
+  height: 33vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 h1,
 h2,
@@ -255,6 +258,8 @@ h3,
 h4,
 h5,
 h6 {
+  color: white;
+  text-transform: uppercase;
   text-align: center;
   font-weight: bold;
 }
@@ -274,9 +279,9 @@ ul {
   float: left;
 }
 .nav-title {
-  font-size: 2.1em;
   margin: 27px 30px;
   float: left;
+  color: white;
 }
 .navbar-links {
   width: 100%;
@@ -284,9 +289,11 @@ ul {
   display: block;
   list-style: none;
 }
+.navbar-links a {
+  color: white;
+}
 .navbar-links li {
   display: inline-block;
-  font-size: 1.5em;
   margin: 35px 0 0 40px;
 }
 .intro {
@@ -298,130 +305,64 @@ ul {
   max-height: 585px;
   display: flex;
 }
-.banner-body {
-  position: absolute;
-  top: 15%;
+.header-text {
   color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
 }
-.banner-header {
-  color: white;
+.social-link {
   padding: 10px;
-  width: 205px;
-  margin: 0;
+  width: 40px;
+  margin: 30px 10px 0 10px;
+  font-size: 1.5em;
+  color: white;
+  background-color: #f4c300;
 }
-.header-yellow {
-  background: #f8be17;
+.bay-bash {
+  background-color: #383935;
+  color: white;
 }
-.header-red {
-  background: #c61f4b;
-}
-.header-form-control {
-  border: none;
+.btn-outline {
+  background: none;
   border-radius: 0;
+  border: 1px solid white;
+  width: 33%;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn-outline:hover {
+  color: #f4c300;
+  border: 1px solid #f4c300;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.line {
+  width: 20%;
+  height: 1px;
+  display: inline-block;
   margin: 20px 0;
 }
-.btn {
+.line-yellow {
+  background: #f4c300;
+}
+.about {
   color: white;
-  font-size: 1.5em;
 }
-.btn-red {
-  background-color: #c61f4b;
+.sign-up label {
+  text-transform: uppercase;
+  width: 120px;
+  text-align: right;
 }
-.kai-header {
-  background-color: #c61f4b;
-}
-.text-kai {
-  font-size: 1.5em;
-  margin: 15px 0 0 0;
-}
-.container-social {
-  z-index: 100;
-}
-.social {
-  position: absolute;
-  top: -30px;
-  height: 60px;
-  width: 220px;
-  background: #0098d8;
-  color: white;
-  font-size: 3em;
-}
-.fa-social {
-  padding: 10px;
-}
-.divider {
-  display: inline-block;
-  height: 80%;
-  width: 2.5px;
-  position: relative;
-  top: 10%;
-}
-.divider-purple {
-  background-color: #413975;
-}
-.section-benefitting {
-  text-align: center;
-}
-.benefitting {
-  color: white;
-  background-color: #c61f4b;
-  width: 300px;
-  padding: 10px 50px;
-  margin: 50px 0 0 0;
-}
-.benefitting-wrapper {
-  width: 300px;
-  display: inline-block;
-}
-.triangle-benefitting {
-  margin: 0 0 0 115px;
-}
-.benioff-address {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 13px;
-  margin: 10px 0 0 10px;
-}
-.social-media li {
-  font-size: 25px;
-}
-.navbar-default a,
-.navbar-default a:visited,
-.navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-nav > li > a:visited {
-  color: white!important;
-}
-.large-text {
-  font-weight: 100;
-  font-size: 2.5vh;
-}
-.text-middle {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-}
-.indented-list {
-  margin-left: 10%;
-}
-.push-top {
-  margin-top: 3%;
-}
-.text-child-life {
-  max-height: 80px;
-}
-.text-charity-care {
-  max-height: 120px;
-}
-.text-research {
-  max-height: 80px;
-}
-.text-social-services {
-  max-height: 120px;
-}
-a.active {
-  text-decoration: underline;
-}
-.long-text {
-  overflow: hidden;
+.sign-up input {
+  width: 100px!important;
+  background: none;
 }
 /*
 @media(max-width:768px) {
@@ -553,49 +494,6 @@ and (orientation : landscape) {
 
 }
 */
-.triangle-up-right {
-  width: 0;
-  height: 0;
-  padding-left: 25px;
-  padding-top: 25px;
-  overflow: hidden;
-  margin: 0;
-}
-.triangle-up-right:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  margin-left: -500px;
-  margin-top: -500px;
-  border-left: 500px solid transparent;
-}
-.triangle-down {
-  width: 20%;
-  height: 0;
-  padding-left: 10%;
-  padding-top: 10%;
-  overflow: hidden;
-}
-.triangle-down:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  margin-left: -500px;
-  margin-top: -500px;
-  border-left: 500px solid transparent;
-  border-right: 500px solid transparent;
-}
-.triangle-yellow:after {
-  border-top: 500px solid #f8be17;
-}
-.triangle-red:after {
-  border-top: 500px solid #c61f4b;
-}
-.triangle-dark-red:after {
-  border-top: 500px solid #a71a46;
-}
 .u-pullLeft {
   float: left;
 }
