@@ -13,9 +13,7 @@ section {
   height:33vh;
   text-align: center;
   display:flex;
-  display:-webkit-flex;
   flex-direction: column;
-  -webkit-flex-direction: column;
   justify-content: center;
 }
 
@@ -99,7 +97,6 @@ strong {
   min-height:500px;
   max-height:585px;
   display:flex;
-  display:-webkit-flex;
 }
 
 .header {
@@ -189,19 +186,50 @@ strong {
   color:white;
 }
 
+
 .sign-up {
+  margin-top:20px;
   label {
     text-transform: uppercase;
     width:120px;
     text-align: right;
+
   }
   input {
+    margin-left:10px;
     width: 100px!important;
     background: none;
+    border: 2px white solid;
+    border-radius: 0;
+    color:white;
+    .placeholder(white)
+  }
+  input:focus {
+    border:2px solid @yellow;
+  }
+  button {
+    margin-left:10px;
+    background: @yellow;
+    border-radius: 0;
+    padding: 6px 25px;
   }
 }
 
-
+footer {
+  height:20vh;
+  background: @red;
+  text-align: center;
+  color:white!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .icon-MNDM {
+    font-size:10em;
+    :before {
+      color:white!important;
+    }
+  }
+}
 
 /*
 @media(max-width:768px) {

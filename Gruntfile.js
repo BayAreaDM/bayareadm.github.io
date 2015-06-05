@@ -89,6 +89,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    autoprefixer: {
+      options: {
+        // Task-specific options go here.
+      },
+      dev: {
+        src: 'dist/badm.css'
+      },
+      prod: {
+        src: 'dist/badm-<%= runtime %>.min.css'
+      },
+    },
     bake: {
       badm: {
         options: {
@@ -145,7 +156,7 @@ module.exports = function(grunt) {
     watch : {
       css: {
         files: 'styles/*.less',
-        tasks: ['less:dev']
+        tasks: ['less:dev', 'autoprefixer:dev']
       },
       js: {
         files: 'js/*.js',
@@ -179,6 +190,7 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
 
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -191,8 +203,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-robots-txt');
   grunt.loadNpmTasks('grunt-sitemap');
   // Default task.
-  grunt.registerTask('dev', ['clean', 'lintspaces', 'jshint', 'less:dev', 'bake', 'injector:dev']);
-  grunt.registerTask('prod', ['clean', 'uglify', 'less:prod', 'bake', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
+  grunt.registerTask('dev', ['clean', 'lintspaces', 'jshint', 'less:dev', 'autoprefixer:dev', 'bake', 'injector:dev']);
+  grunt.registerTask('prod', ['clean', 'uglify', 'less:prod', 'autoprefixer:prod', 'bake', 'injector:prod', 'sitemap:prod', 'robotstxt:prod']);
 
   grunt.registerTask('server', 'browserSync');
   grunt.registerTask('default', 'dev');

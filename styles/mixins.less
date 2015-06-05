@@ -11,3 +11,14 @@
   -webkit-transition:@amount;
   transition:@amount;
 }
+.placeholder(@color: @placeholderText) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+}
