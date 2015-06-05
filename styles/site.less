@@ -121,6 +121,10 @@ strong {
   background-color:@yellow;
 }
 
+.social-link:hover {
+  color:@purple;
+}
+
 .lead {
   font-size: 1.5em;
   line-height: 40px;
@@ -202,9 +206,11 @@ strong {
     border: 2px white solid;
     border-radius: 0;
     color:white;
-    .placeholder(white)
+    .placeholder(white);
+    outline: none;
   }
   input:focus {
+    outline: none;
     border:2px solid @yellow;
   }
   button {
@@ -213,22 +219,46 @@ strong {
     border-radius: 0;
     padding: 6px 25px;
   }
+  button:hover {
+    color:@purple;
+  }
 }
 
 footer {
-  height:20vh;
+  height:25vh;
   background: @red;
   text-align: center;
   color:white!important;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding:30px 0;
   .icon-MNDM {
-    font-size:10em;
+    font-size:8em;
     :before {
       color:white!important;
     }
   }
+  .social-link {
+    padding:7px;
+    width:30px;
+    height:30px;
+    margin:30px 10px 0 10px;
+    font-size:1em;
+  }
+  .social-link:hover {
+    color:@red;
+  }
+}
+
+.footer-contact {
+  margin-top:20px;
+  color:white;
+}
+
+.footer-contact:hover {
+  color:@yellow;
+  text-decoration: none;
 }
 
 /*
