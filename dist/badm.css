@@ -1779,6 +1779,7 @@ strong {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  background-size: cover;
 }
 .lead {
   font-size: 1.5em;
@@ -1798,41 +1799,14 @@ strong {
   position: relative;
 }
 @media (max-width: 768px) {
-  .banner-text {
-    padding: 0;
-  }
-  .banner-text h1 {
-    font-size: 30px;
-  }
-  .navbar-container {
-    width: 100%;
-    padding: 0;
-  }
-  .navbar-links {
-    margin: 10px auto;
-    text-align: center;
-    display: table;
-  }
-  .navbar-links li {
-    padding: 0;
-    display: table-cell;
-  }
-}
-@media (max-width: 768px) {
-  .img,
-  .banner {
-    height: 33vh;
+  .img {
+    height: 35vh;
     position: relative;
+    background-position: 50% 50%;
+    min-height: 35vh;
   }
-  .banner-text {
-    position: absolute;
-    width: 100%;
-    margin-left: -50%;
-    left: 50%;
-    bottom: 0;
-  }
-  .banner-text h1 {
-    font-size: 28px;
+  section {
+    height: 50vh;
   }
 }
 /*
