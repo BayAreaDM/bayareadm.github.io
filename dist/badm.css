@@ -195,20 +195,10 @@ footer {
 .input-sign-up {
   margin-left: 10px;
   width: 100px!important;
-  background: none;
   border: 2px white solid;
   border-radius: 0;
   color: white;
   outline: none;
-}
-.input-sign-up:-moz-placeholder {
-  color: #ffffff;
-}
-.input-sign-up:-ms-input-placeholder {
-  color: #ffffff;
-}
-.input-sign-up::-webkit-input-placeholder {
-  color: #ffffff;
 }
 .input-sign-up:focus {
   outline: none;
@@ -1825,7 +1815,8 @@ strong {
     width: 50%;
   }
   .btn-outline {
-    width: 75%;
+    width: 80%;
+    padding: 10px;
   }
   .hospital {
     height: 700px;
@@ -1847,22 +1838,22 @@ strong {
     height: 400px;
   }
   .social-link-footer .fa {
-    width: 40px;
+    width: 20px;
     display: inline-block;
     text-align: right;
   }
   .social-link-footer span {
-    width: 150px;
+    width: 100px;
     display: inline-block;
     text-align: left;
   }
   .social-link-footer {
     width: 80%;
-    height: 55px;
+    height: 40px;
     margin: 10px auto;
     padding: 5px;
-    font-size: 2em;
-    display: block;
+    font-size: 1.4em;
+    display: inline-block;
   }
   .mobile-sign-up {
     display: -webkit-box!important;
