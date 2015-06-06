@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-06-05
+ * Bay Area Dance Marathon - 2015-06-06
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -9,6 +9,7 @@
 .bay-bash {
   background-color: #383935;
   color: white;
+  height: 37vh;
 }
 .bay-bash .icon-BB {
   font-size: 10em;
@@ -136,12 +137,14 @@ footer {
           justify-content: center;
   padding: 30px 0;
 }
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
 .social-link-footer {
-  padding: 7px;
-  width: 30px;
-  height: 30px;
-  margin: 30px 10px 0 10px;
-  font-size: 1em;
+  padding: 6px 12px;
+  margin: 0 10px 0 10px;
+  font-size: 1.4em;
 }
 .social-link-footer:hover {
   color: #c61f4b;
@@ -168,8 +171,6 @@ footer {
   text-align: center;
   width: 100%;
   height: 100%;
-  vertical-align: middle;
-  display: table-cell;
 }
 .social-link-header {
   padding: 10px;
@@ -1642,44 +1643,25 @@ footer {
   color: #000000;
 }
 .img {
-  background-size: 100%;
-  display: block;
-  width: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
+  height: 55%;
+  min-height: 500px;
+  max-height: 585px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .header-background {
   background-image: url("/assets/images/header.jpg");
 }
 .purple-girl {
   background-image: url("/assets/images/purple-girl.jpg");
-}
-.nate {
-  background-image: url("/assets/images/nate.jpg");
-}
-.kai {
-  background-image: url("/assets/images/kai-banner.jpg");
-}
-.countdown {
-  background-image: url("/assets/images/countdown.jpg");
-}
-.cars {
-  background-position: 100% 40%!important;
-  background-image: url("/assets/images/cars.jpg");
-}
-.laughing {
-  background-image: url("/assets/images/laughing.jpg");
-}
-.kai-landscape {
-  background-image: url("/assets/images/kai-landscape.jpg");
-}
-.kaleiya-bubble {
-  background-image: url("/assets/images/kaleiya-bubble.jpg");
-}
-.sleeping-baby {
-  background-image: url("/assets/images/sleeping-baby.jpg");
-}
-.social-services {
-  background-image: url("/assets/images/social-services.jpg");
 }
 .navbar-default {
   color: white;
@@ -1771,16 +1753,6 @@ strong {
 .btn {
   font-family: 'novecento_sans_wide_bookbold', sans-serif;
 }
-.img {
-  height: 55%;
-  min-height: 500px;
-  max-height: 585px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-size: cover;
-}
 .lead {
   font-size: 1.5em;
   line-height: 40px;
@@ -1803,16 +1775,47 @@ strong {
     text-align: center;
   }
   .img {
-    height: 35vh;
+    height: 300px;
+    min-height: 300px;
     position: relative;
     background-position: 50% 50%;
-    min-height: 35vh;
+    background-size: cover;
   }
   section {
-    height: 50vh;
+    height: 300px;
+    background-size: cover;
+  }
+  .header-text {
+    height: 300px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social-link-header {
+    width: 40%;
   }
   .support-icons {
     font-size: 2em;
+  }
+  .about {
+    height: 600px;
+  }
+  .support-icons {
+    font-size: 4em;
+  }
+  .bay-bash {
+    min-height: 55vh;
+    height: 400px;
   }
   .bay-bash .icon-BB {
     font-size: 7em;
@@ -1821,8 +1824,11 @@ strong {
   .line {
     width: 50%;
   }
+  .btn-outline {
+    width: 75%;
+  }
   .hospital {
-    height: 100vh;
+    height: 700px;
   }
   .lbl-sign-up {
     width: 100%;
@@ -1838,7 +1844,25 @@ strong {
     margin: 0 0 10px 0;
   }
   footer {
-    height: 50vh;
+    height: 400px;
+  }
+  .social-link-footer .fa {
+    width: 40px;
+    display: inline-block;
+    text-align: right;
+  }
+  .social-link-footer span {
+    width: 150px;
+    display: inline-block;
+    text-align: left;
+  }
+  .social-link-footer {
+    width: 80%;
+    height: 55px;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 2em;
+    display: block;
   }
 }
 /*
