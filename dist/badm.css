@@ -70,6 +70,9 @@
 .line-yellow {
   background: #f4c300;
 }
+.ie-BB {
+  display: none;
+}
 .section-blue {
   background-color: #006fba;
 }
@@ -1958,4 +1961,38 @@ and (orientation : landscape) {
 
 }
 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  section {
+    display: table!important;
+  }
+  .header-background {
+    display: table;
+  }
+  .header-text {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+  }
+  .about-body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .bay-bash-container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .hospital-container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .icon-BB {
+    display: none!important;
+  }
+  .ie-BB {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 /*# sourceMappingURL=badm.css.map */

@@ -14,13 +14,11 @@ module.exports = function(grunt) {
     dependencies: {
       dev: [
             '<%= uglify.dist.src %>',
-            'dist/badm.css',
-            'dist/ie.css'
+            'dist/badm.css'
       ],
       prod: [
             '<%= uglify.dist.dest %>',
-            'dist/badm-<%= runtime %>.min.css',
-            'dist/ie-<%= runtime %>.min.css'
+            'dist/badm-<%= runtime %>.min.css'
       ]
     },
     clean: ['dist/*'],
@@ -73,7 +71,6 @@ module.exports = function(grunt) {
           sourceMapFilename: 'dist/badm.css.map'
         },
         files: {
-          'dist/ie.css': 'styles/ie.less',
           'dist/badm.css': 'styles/badm.less'
         }
       },
@@ -88,7 +85,6 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          'dist/ie-<%= runtime %>.min.css': 'styles/ie.less',
           'dist/badm-<%= runtime %>.min.css' : 'styles/badm.less'
         }
       }
@@ -102,7 +98,7 @@ module.exports = function(grunt) {
         ]
       },
       dev: {
-        src: ['dist/badm.css', 'dist/ie.css']
+        src: ['dist/badm.css']
       },
       prod: {
         src: ['dist/badm-<%= runtime %>.min.css', 'dist/ie-<%= runtime %>.min.css']
