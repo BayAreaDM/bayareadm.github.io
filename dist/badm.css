@@ -18,15 +18,20 @@
 .support-icons {
   font-size: 3.5em;
 }
+.support-icon {
+  min-width: 200px;
+  min-height: 60px;
+  display: inline-block;
+}
 .bay-bash {
   background-color: #383935;
   color: white;
   min-height: 37vh;
-  padding: 50px;
+  padding: 50px 0;
 }
 .bay-bash .icon-BB {
   font-size: 10em;
-  display: block;
+  display: inline-block;
 }
 .bay-bash-body {
   font-size: 1em;
@@ -234,11 +239,9 @@ footer {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  display: inline-block;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 .icon-MNDM:before {
   content: "\e718";
@@ -1672,14 +1675,10 @@ nav .row {
   height: 100px;
   margin: 0;
 }
-.nav-logo {
-  height: 100px;
-  padding: 10px 0;
-  float: left;
-}
 .nav-title {
   margin-top: 15px;
   float: left;
+  width: 200px;
   font-size: 4.5em;
   text-align: left;
 }
