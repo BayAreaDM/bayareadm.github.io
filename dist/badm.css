@@ -1,15 +1,28 @@
 /*!
- * Bay Area Dance Marathon - 2015-06-06
+ * Bay Area Dance Marathon - 2015-06-07
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
+.about-body {
+  min-height: 340px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .support-icons {
   font-size: 3.5em;
 }
 .bay-bash {
   background-color: #383935;
   color: white;
-  height: 37vh;
+  min-height: 37vh;
+  padding: 50px;
 }
 .bay-bash .icon-BB {
   font-size: 10em;
@@ -41,7 +54,6 @@
 .btn-outline:hover {
   color: #f4c300;
   border: 1px solid #f4c300;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .line {
@@ -103,8 +115,6 @@
 }
 .section-black-gradient {
   background: #292929;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #323232));
-  background: -webkit-linear-gradient(top, #292929 0%, #323232 100%);
   background: linear-gradient(to bottom, #292929 0%, #323232 100%);
 }
 .white-text {
@@ -118,27 +128,23 @@
   font-style: normal;
 }
 footer {
-  height: 25vh;
+  min-height: 25vh;
   background: #c61f4b;
   text-align: center;
   color: white!important;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 30px 0;
 }
 .social-links {
-  margin-top: 20px;
+  margin: 25px 0;
   text-align: center;
 }
 .social-link-footer {
@@ -156,7 +162,6 @@ footer {
   color: white!important;
 }
 .footer-contact {
-  margin-top: 20px;
   color: white;
 }
 .footer-contact:hover {
@@ -229,9 +234,11 @@ footer {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  display: inline-block;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 .icon-MNDM:before {
   content: "\e718";
@@ -1642,7 +1649,6 @@ footer {
   min-height: 500px;
   max-height: 585px;
   width: 100%;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1652,6 +1658,12 @@ footer {
 }
 .purple-girl {
   background-image: url("/assets/images/purple-girl.jpg");
+}
+nav .container {
+  height: 100px;
+}
+nav .row {
+  height: 100px;
 }
 .navbar-default {
   color: white;
@@ -1680,6 +1692,7 @@ footer {
   display: block;
   list-style: none;
   text-align: right;
+  margin: 0;
 }
 .navbar-links a {
   color: white;
@@ -1701,22 +1714,17 @@ footer {
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding-bottom: 20px;
   font-size: 16px;
 }
 section {
-  height: 33vh;
+  min-height: 33vh;
   width: 100%;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1777,16 +1785,12 @@ strong {
   }
   .header-text {
     height: 300px;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1856,11 +1860,9 @@ strong {
     display: inline-block;
   }
   .mobile-sign-up {
-    display: -webkit-box!important;
     display: -webkit-flex!important;
     display: -ms-flexbox!important;
     display: flex!important;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1868,8 +1870,6 @@ strong {
     float: right;
     height: 100px;
     font-size: 1.5em;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -1959,3 +1959,4 @@ and (orientation : landscape) {
 
 }
 */
+/*# sourceMappingURL=badm.css.map */
