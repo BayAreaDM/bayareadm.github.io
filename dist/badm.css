@@ -207,10 +207,9 @@ footer {
 }
 .input-sign-up {
   margin-left: 10px;
-  width: 100px!important;
+  width: 200px!important;
   border: 2px white solid;
   border-radius: 0;
-  color: white;
   outline: none;
 }
 .input-sign-up:focus {
