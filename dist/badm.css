@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-06-07
+ * Bay Area Dance Marathon - 2015-06-09
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -1681,11 +1681,10 @@ nav .row {
   margin: 0;
 }
 .nav-title {
-  margin-top: 12.5px;
+  margin-top: 10px;
   float: left;
   width: 200px;
-  font-size: 3.2em;
-  text-align: left;
+  font-size: 3.5em;
 }
 .nav-title *:before {
   color: white!important;
