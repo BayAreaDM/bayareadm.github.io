@@ -3,8 +3,12 @@
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
+.about-text {
+  display: block!important;
+  margin: 0 0 20px 0;
+}
 .about-body {
-  min-height: 450px;
+  min-height: 500px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1814,7 +1818,7 @@ strong {
     font-size: 2em;
   }
   .about {
-    height: 600px;
+    height: 800px;
   }
   .support-icons {
     font-size: 4em;
