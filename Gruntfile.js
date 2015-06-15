@@ -134,7 +134,7 @@ module.exports = function(grunt) {
     },
     sitemap: {
       prod: {
-        pattern: ['*.html']
+        pattern: ['index.html']
       }
     },
     robotstxt: {
