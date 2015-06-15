@@ -194,7 +194,6 @@ footer {
   padding: 10px;
   width: 45px;
   margin: 30px 10px 0 10px;
-  font-size: 1.5em;
 }
 .social-link-header:hover {
   color: #8379b9;
@@ -1831,7 +1830,7 @@ strong {
     height: 400px;
   }
   .bay-bash .icon-BB {
-    font-size: 7em;
+    font-size: 5em;
     display: block;
   }
   .line {
@@ -1842,7 +1841,7 @@ strong {
     padding: 10px;
   }
   .hospital {
-    height: 700px;
+    min-height: 800px;
   }
   .sign-up {
     margin-top: 30px;
