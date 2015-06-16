@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://bayareadm.org/donate.html</loc>
-    <lastmod>2015-03-26T15:40:23.000Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://bayareadm.org/funds.html</loc>
-    <lastmod>2015-06-07T18:15:38.000Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://bayareadm.org/get-involved.html</loc>
-    <lastmod>2015-06-07T18:15:38.000Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://bayareadm.org/</loc>
-    <lastmod>2015-06-07T18:15:38.000Z</lastmod>
+    <lastmod>2015-06-16T06:11:08.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
