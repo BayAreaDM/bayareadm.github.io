@@ -1809,6 +1809,9 @@ strong {
   margin: 0 auto;
   max-width: 800px;
 }
+.sponsor-logo {
+  max-width: 250px;
+}
 .sf-examiner {
   margin: 70px 0;
 }
@@ -1946,6 +1949,9 @@ strong {
   }
   .sponsors {
     min-height: 900px;
+  }
+  .sponsor-logos {
+    max-width: 100%;
   }
   .sf-examiner {
     margin: 50px 0 0 0;
