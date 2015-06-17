@@ -52,3 +52,45 @@ strong {
   color:white;
   background-color:@yellow;
 }
+
+
+.btn-outline {
+  background:none;
+  border-radius:0;
+  border:1px solid white;
+  width:33%;
+  padding:20px;
+  text-align: center;
+  text-transform: uppercase;
+  color:white;
+  outline: none;
+}
+
+.btn-outline:visited, .btn-outline:active, .btn-outline:focus {
+  color:white;
+  outline: none;
+}
+
+.btn-outline:hover {
+  color:@yellow;
+  border:1px solid @yellow;
+  .m-transition(0.5s);
+}
+
+.btn-outline-black {
+  background:none;
+  border-radius:0;
+  border:1px solid black;
+  color:black;
+}
+
+.btn-outline-black:visited, .btn-outline-black:active, .btn-outline-black:focus {
+  color:black;
+  outline: none;
+}
+
+.btn-outline-black:hover {
+  color:@red;
+  border:1px solid @red;
+  .m-transition(0.5s);
+}

@@ -1,5 +1,5 @@
 /*!
- * Bay Area Dance Marathon - 2015-06-16
+ * Bay Area Dance Marathon - 2015-06-17
  * http://bayareadm.org
  * Copyright (c) 2015 Bay Area Dance Marathon;
  */
@@ -42,28 +42,6 @@
   display: block;
   margin: 10px;
   line-height: 30px;
-}
-.btn-outline {
-  background: none;
-  border-radius: 0;
-  border: 1px solid white;
-  width: 33%;
-  padding: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  outline: none;
-}
-.btn-outline:visited,
-.btn-outline:active,
-.btn-outline:focus {
-  color: white;
-  outline: none;
-}
-.btn-outline:hover {
-  color: #f4c300;
-  border: 1px solid #f4c300;
-  transition: 0.5s;
 }
 .line {
   width: 20%;
@@ -1779,16 +1757,65 @@ strong {
   color: white;
   background-color: #f4c300;
 }
+.btn-outline {
+  background: none;
+  border-radius: 0;
+  border: 1px solid white;
+  width: 33%;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+}
+.btn-outline:visited,
+.btn-outline:active,
+.btn-outline:focus {
+  color: white;
+  outline: none;
+}
+.btn-outline:hover {
+  color: #f4c300;
+  border: 1px solid #f4c300;
+  transition: 0.5s;
+}
+.btn-outline-black {
+  background: none;
+  border-radius: 0;
+  border: 1px solid black;
+  color: black;
+}
+.btn-outline-black:visited,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+  color: black;
+  outline: none;
+}
+.btn-outline-black:hover {
+  color: #c61f4b;
+  border: 1px solid #c61f4b;
+  transition: 0.5s;
+}
 .sponsors {
   text-align: center;
+  min-height: 430px;
 }
 .sponsors h1 {
   color: black;
 }
-.sponsor-logos {
+.sponsor-logos,
+.sponsor-buttons {
   display: inline-block;
   margin: 0 auto;
   max-width: 800px;
+}
+.sf-examiner {
+  margin: 70px 0;
+}
+.sponsor-button {
+  width: 320px;
+  border: 2px solid black;
+  margin: 0 32px 20px 32px;
 }
 .u-pullLeft {
   float: left;
@@ -1917,8 +1944,17 @@ strong {
     text-decoration: none;
     color: white!important;
   }
+  .sponsors {
+    min-height: 900px;
+  }
+  .sf-examiner {
+    margin: 50px 0 0 0;
+  }
 }
 @media (max-width: 320px) {
+  .sponsors {
+    min-height: 800px;
+  }
   .bay-bash .icon-BB {
     font-size: 4em;
   }
